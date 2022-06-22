@@ -2,9 +2,11 @@ import { React, useState, useEffect } from "react";
 import { Form, Pagination } from "react-bootstrap";
 import { products } from "../components/datadummy/Products";
 import Navbar  from '../components/Navbar';
+import { Rate } from 'antd'
 
 // Component
 import Homelist from "../components/list/Homelist";
+
 // import { render } from "express/lib/response";
 
 const Home = () => {
@@ -68,13 +70,13 @@ return (
         
         <div className="products d-flex flex-wrap gap-3 mt-4 justify-content-md-start justify-content-center ">
         {showProduct.map((item, index) => {
-            return <Homelist key={index} id={index} image={item.image} title={item.title} price={item.price} stock={item.stock} />;
-        })}
-
-          </div>
-          </div>
-          <div>
-          <Pagination  size="md - d-flex flext-warp ms-3 mt-4  justify-content-md-center">{items}</Pagination>
+          return <Homelist key={index} id={index} image={item.image} title={item.title} price={item.price} stock={item.stock} />
+        }
+        )}
+        </div>
+        </div>
+        <div>
+        <Pagination  size="md - d-flex flext-warp ms-3 mt-4  justify-content-md-center">{items}</Pagination>
           </div>
         </>
         );

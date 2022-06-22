@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { products } from '../components/datadummy/Products';
-
+import Navbar from '../components/Navbar';
 import ListCategory from '../components/list/ListCategory'
 
 const Category = () => {
@@ -16,26 +16,29 @@ const Category = () => {
     }, [])
     
     return (
-        <div className="container mt-4">
+      <>
+      <Navbar />
+      <div className="container mt-4">
       <h4>List Category</h4>
       <table className="table table-dark table-striped mt-4">
-        <thead>
-          <tr className="text-center">
-            <th scope="col">No</th>
-            <th scope="col">Category Name</th>
-            <th scope="col">Action</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {categoryProducts.map((item, index) => {
-            return <ListCategory key={index} id={`${index + 1}`} title={item.name} />;
-          })}
-        </tbody>
+      <thead>
+      <tr className="text-center">
+      <th scope="col">No</th>
+      <th scope="col">Category Name</th>
+      <th scope="col">Action</th>
+      </tr>
+      </thead>
+      
+      <tbody>
+      {categoryProducts.map((item, index) => {
+        return <ListCategory key={index} id={`${index + 1}`} title={item.name} />;
+      })}
+      </tbody>
       </table>
-    </div>
-        )
-        
+      </div>
+      </>
+      )
+      
     }
-
+    
 export default Category

@@ -12,16 +12,19 @@ import PrivateRoute from '../Private_Route'
     const [ emaillog, setEmailLog ] = useState('')
     const [ passwordLog, setPasswordLog] = useState('')
 
-    const [ isLogin, setIsLogin ] = useState(false)
+    const [ isLogin, setIsLogin ] = useState(true)
     const [ notif, setNotif ] = useState(false)
 
     const dataUser = Users
     console.log(dataUser);
 
+    
+
     const handleOnSubmit = (e) => { //handlesubmit gunanya ketika submid dia membawa state yang ada di dalamnya
         e.preventDefault() //biar tidak refesh ke halaman baru
 
          const data = dataUser.find((user) => user.email === emaillog ) 
+            // const data = dataUser.find((admin) => admin.email === emaillog )
          console.log(data);
 
          if (data) {

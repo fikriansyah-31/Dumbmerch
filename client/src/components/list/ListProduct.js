@@ -17,6 +17,11 @@ const ListProduct = (props) => {
         navigate(`/edit-product`)
  }
 
+ const handleAdd = () => {
+  navigate(`/add-product`)
+}
+
+
 
   return (
     <>

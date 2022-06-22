@@ -3,9 +3,12 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { products } from '../components/datadummy/Products'
 import { useParams } from 'react-router-dom'
+import Navbar from '../components/Navbar'
+// import { Table } from 'react-bootstrap/Table'
+// import Order from '../components/list/Order'
 
     const DetailProduct = () => {
-        const params = useParams()
+        const params = useParams() // mengembalikan objek pasangan kunci/nilai parameter URL
         const index = params.id
 
         // Format Currency
@@ -17,6 +20,7 @@ import { useParams } from 'react-router-dom'
 
   return (
       <>
+      <Navbar/>
       <Container>
       <Row className="mt-5 mb-5">
         <Col xs={12} md={6} className="d-flex justify-content-center">
@@ -30,6 +34,7 @@ import { useParams } from 'react-router-dom'
             <p className="text-justify mb-5">{products[index].description} </p>
 
             <p className="text-var-red fw-bold fs-5 text-end mt-2">{formatter.format(products[index].price)}</p>
+           
           </div>
 
           

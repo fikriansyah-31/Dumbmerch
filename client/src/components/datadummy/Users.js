@@ -5,7 +5,7 @@ export const Users = [
         fullname: 'Fikriansyah',
         phone: '0812-1234-1234',
         gender: 'Male',
-        email: 'Fikri@gmail.com',
+        email: 'Fikriansyah@gmail.com',
         password: '12456',
         address: 'Jakarta',
         image: 'https://assets.promediateknologi.com/crop/0x0:0x0/x/photo/2022/03/31/950962144.jpg'
